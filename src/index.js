@@ -1,8 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './app/App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function renderRoot(Root) {
+    render(<Root />, document.getElementById('root'));
+}
+
+renderRoot(App);
 registerServiceWorker();
+
+if (module.hot) {
+    module.hot.accept('./app/App', () => {
+        const NewApp = require('./app/App').default;
+        renderRoot(NewApp);
+    });
+}
