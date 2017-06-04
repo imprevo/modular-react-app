@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> snapshot renders and matches our snapshot 1`] = `
+<menu
+  className="Menu"
+>
+  <ul
+    className="Menu__list"
+  >
+    <li
+      className="Menu__item"
+    >
+      <a
+        className="active Menu__link"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Main
+      </a>
+    </li>
+    <li
+      className="Menu__item"
+    >
+      <a
+        className="Menu__link"
+        href="/about"
+        onClick={[Function]}
+        style={undefined}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="Menu__item"
+    >
+      <a
+        className="Menu__link"
+        href="/404"
+        onClick={[Function]}
+        style={undefined}
+      >
+        404
+      </a>
+    </li>
+  </ul>
+</menu>
+`;

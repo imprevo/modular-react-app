@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './index.css';
 
-function MenuItem(props) {
+function MenuItem({ children, ...props }) {
     return (
         <li className="Menu__item">
             <NavLink className="Menu__link" activeClassName="active" {...props}>
-                {props.children}
+                {children}
             </NavLink>
         </li>
     )
@@ -26,4 +26,5 @@ class Menu extends Component {
     }
 }
 
+export { MenuItem };
 export default Menu;
