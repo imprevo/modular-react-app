@@ -1,19 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app/App';
+import { HashRouter } from 'react-router-dom';
+import App from './app/index';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 function renderRoot(Root) {
-    render(<Root />, document.getElementById('root'));
+    render(
+        <HashRouter>
+            <Root />
+        </HashRouter>,
+        document.getElementById('root')
+    );
 }
 
 renderRoot(App);
 registerServiceWorker();
 
 if (module.hot) {
-    module.hot.accept('./app/App', () => {
-        const NewApp = require('./app/App').default;
+    module.hot.accept('./app/index', () => {
+        const NewApp = require('./app/index').default;
         renderRoot(NewApp);
     });
 }

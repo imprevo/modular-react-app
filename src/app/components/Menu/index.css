@@ -1,0 +1,31 @@
+.Menu {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-size: 1rem;
+}
+
+.Menu__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Menu__item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.Menu__link {
+    display: inline-block;
+    padding: .5em 1em;
+    color: #fff;
+    text-decoration: none;
+}
+.Menu__link.active,
+.Menu__link:hover {
+    background: #222;
+}
