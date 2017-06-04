@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
-import App from './app/index';
+import App from 'app';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
@@ -18,8 +18,8 @@ renderRoot(App);
 registerServiceWorker();
 
 if (module.hot) {
-    module.hot.accept('./app/index', () => {
-        const NewApp = require('./app/index').default;
+    module.hot.accept('app', () => {
+        const NewApp = require('app').default;
         renderRoot(NewApp);
     });
 }

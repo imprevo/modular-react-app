@@ -1,3 +1,3 @@
-import PageMain from './pages/Main/index';
+import PageMain from './pages/Main';
 
 export default PageMain;

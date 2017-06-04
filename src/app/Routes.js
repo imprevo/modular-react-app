@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import PageNotFound from './pages/NotFound/index';
-import ModuleMain from '../modules/main/index';
-import ModuleAbout from '../modules/about/index';
+import PageNotFound from './pages/NotFound';
+import ModuleMain from 'modules/main';
+import ModuleAbout from 'modules/about';
 
 class Routes extends Component {
     render() {

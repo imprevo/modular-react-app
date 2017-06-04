@@ -1,3 +1,3 @@
-import PageAbout from './pages/About/index';
+import PageAbout from './pages/About';
 
 export default PageAbout;

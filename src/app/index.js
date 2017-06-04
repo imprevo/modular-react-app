@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './components/App/index';
+import App from './components/App';
 import Routes from './Routes';
 
 export default () => (
