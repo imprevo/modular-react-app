@@ -24,11 +24,11 @@ exports[`<Menu /> snapshot renders and matches our snapshot 1`] = `
     >
       <a
         className="Menu__link"
-        href="/about"
+        href="/route1"
         onClick={[Function]}
         style={undefined}
       >
-        About
+        Route 1
       </a>
     </li>
     <li
@@ -36,11 +36,11 @@ exports[`<Menu /> snapshot renders and matches our snapshot 1`] = `
     >
       <a
         className="Menu__link"
-        href="/404"
+        href="/route2"
         onClick={[Function]}
         style={undefined}
       >
-        404
+        Route 2
       </a>
     </li>
   </ul>

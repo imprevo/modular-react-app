@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import './index.css';
 
@@ -13,13 +14,28 @@ function MenuItem({ children, ...props }) {
 }
 
 class Menu extends Component {
+    static propTypes = {
+        routeList: PropTypes.arrayOf(
+            PropTypes.shape({
+                path: PropTypes.string,
+                title: PropTypes.string,
+            })
+        ),
+    }
+
+    static defaultProps = {
+        routeList: [],
+    }
+
     render() {
+        const { routeList } = this.props;
+
         return (
             <menu className="Menu">
                 <ul className="Menu__list">
-                    <MenuItem exact to="/">Main</MenuItem>
-                    <MenuItem exact to="/about">About</MenuItem>
-                    <MenuItem to="/404">404</MenuItem>
+                    {routeList.map(({ path, title }) => (
+                        <MenuItem exact key={path} to={path}>{title}</MenuItem>
+                    ))}
                 </ul>
             </menu>
         );

@@ -6,11 +6,27 @@ import { MemoryRouter } from 'react-router-dom';
 
 import Menu, { MenuItem } from '../index';
 
+const routeList = [
+    {
+        path: '/',
+        title: 'Main',
+    },
+    {
+        path: '/route1',
+        title: 'Route 1',
+    },
+    {
+        path: '/route2',
+        title: 'Route 2',
+    },
+];
+
 describe('<Menu /> shallow', () => {
     it('render <Menu />', () => {
         const wrapper = shallow(
-            <Menu />
+            <Menu routeList={routeList} />
         );
+
         expect(wrapper.find('.Menu').length).toEqual(1);
         expect(wrapper.find('.Menu__list').length).toEqual(1);
         expect(wrapper.find('.Menu__list').find(MenuItem).length).toEqual(3);
@@ -37,7 +53,7 @@ describe('<Menu /> mount', () => {
     beforeEach(() => {
         wrapper = mount(
             <MemoryRouter>
-                <Menu />
+                <Menu routeList={routeList} />
             </MemoryRouter>
         );
     });
@@ -72,7 +88,7 @@ describe('<Menu /> snapshot', () => {
     it('renders and matches our snapshot', () => {
         const component = renderer.create(
             <MemoryRouter>
-                <Menu />
+                <Menu routeList={routeList} />
             </MemoryRouter>
         );
         const tree = component.toJSON();

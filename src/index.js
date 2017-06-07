@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-import App from 'app';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './configureStore';
+import App from 'app';
 
 const reducers = {
     example: (state = {}) => state,

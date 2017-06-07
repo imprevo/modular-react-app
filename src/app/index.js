@@ -8,7 +8,7 @@ function onLoadRoute(routeModule) {
 }
 
 export default () => (
-    <App>
+    <App routeList={routeList}>
         <Routes routeList={routeList} onLoadRoute={onLoadRoute} />
     </App>
 );
